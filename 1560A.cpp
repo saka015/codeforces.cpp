@@ -1,31 +1,38 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-    int arr[1001];
 
-    int j = 1;
-    for (int i = 1; i <= 1666; i++)
-    {
-        if (i % 3 != 0)
-        {
-            if (i % 10 != 3)
-            {
-                arr[j] = i;
-                j = j + 1;
-            }
-        }
+#define ll long long
+#define endl '\n'
+#define debug(n) cout<<(n)<<endl;
+const ll INF = 2e18 + 99;
+
+int main(){
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+
+  int t;
+  cin>>t;
+  while(t--){
+    int a, b, c, a1, b1;
+    cin>>a1>>b1>>c;
+
+    a = max(a1, b1);
+    b = min(a1, b1);
+
+    if(a - b >= b && 2*(a - b) >= c){
+      if(c <= a - b){
+        c += (a - b);
+      }
+      else{
+        c -= (a - b);
+      }
+      cout<<c<<endl;
+      continue;
     }
 
-    int t;
-    cin >> t;
-    int k;
-    while (t--)
-    {
-        cin >> k;
-        cout << arr[k] << endl;
-    }
+    cout<<-1<<endl;
+  }
 
-    return 0;
+
 }

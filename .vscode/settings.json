@@ -38,6 +38,7 @@
   "files.associations": {
     "*.embeddedhtml": "html",
     "iostream": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "ostream": "cpp"
   }
 }
